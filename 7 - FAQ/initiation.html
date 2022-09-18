@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
     <title>Modèle</title>
+
+    <!-- CSS -->
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&    family=Outfit:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+    
+    <!-- JS -->
+
+    <script src="script.js" defer></script>
 </head>
 <body>
     <main class="[ flexColumn ]">
         <section class="[ titre ]">
-            <h1> FAQ - Ce qu'on sait de Git et Github </h1>
+            <h1> FAQ - Ce que je sais de Git et de Github </h1>
         </section>
         <section class="[ accordeon ]">
             <div class="[ paddingBottom textCenter ] [ displayFlex justifyEvenly alignCenter ]">
@@ -29,7 +40,7 @@
                 <p>Git, à quoi ça sert ?</p>
                 <i class="fas fa-chevron-down"></i>
             </div>
-            <div class="reponse">
+            <div class="[ hidden ] [ reponse ]">
                 <p>Git est un système de contrôle des versions.</p> 
                 <p>C'est-à-dire :
                     <ul>
@@ -45,7 +56,7 @@
                 <p>Github, à quoi ça sert ?</p>
                 <i class="fas fa-chevron-down"></i>
             </div>
-            <div class="reponse">
+            <div class="[ hidden ] [ reponse ]">
                 <p>Service qui nous permet de stocker des répertoires en ligne et qui va grandement faciliter le travail de groupe sur un même projet.</p>
                 <p>En effet, Github permet de stocker le projet sur lequel on travaille et, chaque personne participant au projet, va pouvoir le pull de Github pour le modifier localement.</p>
                 <p>Ensuite, il est possible de push la modification dans le répertoire du projet et de merge la modification avec le projet après vérification de la modification par les autres participants.</p>
@@ -56,7 +67,7 @@
                 <p>Comment Git fonctionne ?</p>
                 <i class="fas fa-chevron-down"></i>
             </div>
-            <div class="[ reponse ]">
+            <div class="[ hidden ] [ reponse ]">
                 <p>Git va nous permettre de travailler sur une version de notre projet, dans la main branch ou dans une branch à part afin de ne pas toucher à notre code source lorsqu'on effectue des modifications.</p>
                 <p>Pour pouvoir effectuer une modification à la version sur laquelle on travaille il va falloir effectuer plusieurs opérations :
                     <ul>
@@ -75,7 +86,7 @@
                 <i class="fas fa-chevron-down"></i>
             </div>
 
-            <div class="[ reponse ]">
+            <div class="[ hidden ] [ reponse ]">
                 <p>Git <span>init</span> qui nous permet d'initialiser un projet Git.</p>
                 <p>Git <span>add</span>  *nom du fichier* pour ajouter un fichier à l'état "staging" ou Git add *.* pour y ajouter tous les fichiers.</p>
                 <p>Git <span>commit</span> pour fusionner la modification avec la version précédente. </p>
@@ -92,7 +103,7 @@
                 <i class="fas fa-chevron-down"></i>
             </div>
 
-            <div class="[ reponse ]">
+            <div class="[ hidden ] [ reponse ]">
                 <p>Git <span>clone</span> pour cloner un répertoire de Github sur notre ordinateur. </p>
                 <p>Git <span>pull</span> *origin/alias* *branch* pour aller chercher des fichiers sur Github. </p>
                 
@@ -102,12 +113,13 @@
                 <p>Avec Visual Studio Code, il est possible de faire les différentes étapes de staging, commit et push directement depuis l'onglet *source control*.</p>
             </div>
 
+            <!-- Pour aller plus loin - "question" -->
             <div class="[ question ]">
                 <p>Pour aller plus loin</p>
                 <i class="fas fa-chevron-down"></i>
             </div>
 
-            <div class="[ reponse ]">
+            <div class="[ hidden ] [ reponse ]">
                 <p>J'ai suivi la playlist de <span>The Net Ninja</span> disponible <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR" class="[ lien ]">ici</a>.</p>
                 <p>Il a également une vidéo qui explique comment utiliser Github Pages, disponible <a href="https://www.youtube.com/watch?v=QyFcl_Fba-k&t=611s&ab_channel=TheNetNinja" class="[ lien ]">ici</a>.</p>
             </div>
@@ -118,7 +130,7 @@
                 <i class="fas fa-chevron-down"></i>
             </div>
 
-            <div class="[ reponse ]">
+            <div class="[ hidden ] [ reponse ]">
                 <p></p>
             </div> -->
         </section>

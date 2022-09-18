@@ -110,7 +110,6 @@ svg {
   }
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -120,6 +119,13 @@ svg {
 
 
 /* [UTILITAIRES] */
+
+.visible{
+  display: block;
+}
+.hidden{
+  display: none;
+}
 
 .paddingBottom{
   padding-bottom: 1.5rem;
@@ -143,12 +149,12 @@ body{
     height: 100vh;
     background-color: #1E2337;
     color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 main{
   height: 100%;
-  margin: 2rem;
+  margin: 5rem;
 }
 
 .titre{
@@ -159,6 +165,7 @@ main{
   border: 2px var(--clrPastelRed) solid;
   background-color: hsl(228, 29%, 22%);
 
+  font-family: 'Righteous', cursive;
   font-size: var(--fs200);
   font-weight: var(--fwBold);
   text-transform: uppercase;
@@ -167,13 +174,22 @@ main{
 
 .accordeon{
   width: 100%;
+  padding-bottom: 2rem;
+}
+
+.fa-triangle-exclamation{
+  font-size: 3rem;
+  color: var(--clrLightCorail);
 }
 
 .question{
   padding: 1rem;
   
   border: 2px var(--clrPastelRed) solid;
-  background-color: hsl(228, 29%, 22%);
+  background-color: hsl(228, 29%, 17%);
+
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
 
   color: var(--clrLightGreen);
 
