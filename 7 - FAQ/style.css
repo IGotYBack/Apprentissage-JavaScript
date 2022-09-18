@@ -1,3 +1,116 @@
+:root{
+    
+    --clrCorail:#ff7f50;
+    --clrLightCorail:#fa8072;
+    --clrPastelRed:#e45d5d;
+    --clrdGreenCanard:#048b9a;
+    --clrTurquoise:#40e0d0;
+    --clrLightGreen:#a7dfd9;
+    --clrGrey:#4f5b66;
+    --clrBlue:#293e60;
+    --clrWhite: #FFFFFF; 
+
+    --ffArrondi:'Grandstander', cursive;
+    --ffStrictFin:'Josefin Sans', sans-serif;
+    --ffStrictGras:'Mouse Memoirs', sans-serif;
+
+    /* --ffBody:;
+    --ffHeading:; */
+
+    --fwRegular: 400;
+    --fwSemiBold: 500;
+    --fwBold: 700;
+
+    --fs80: 0.8rem;
+    --fs100: 1rem;
+    --fs150: 1.5rem;
+    --fs200: 2rem;
+    --fs250: 2.5rem;
+    --fs300: 3rem;
+
+    /* peut être utile en cas de media query => changement plus rapides */
+    --fsBody: var(--fs100);
+    --fsSubtitle: var(--fs150);
+    --fsTitle: var(--fs200);
+
+}
+
+/* === Reset === */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* remove style from button */
+button{
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body{
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -5,21 +118,116 @@
     text-decoration: none;
 }
 
-body{
-    color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+
+/* [UTILITAIRES] */
+
+.paddingBottom{
+  padding-bottom: 1.5rem;
 }
 
-.container{
+.textCenter{
+  text-align: center;
+}
+
+.lien{
+  cursor: pointer;
+
+  font-weight: bolder;
+  text-decoration: none;
+  color: var(--clrLightGreen);
+}
+
+/* [BLOCS] */
+
+body{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     background-color: #1E2337;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+  height: 100%;
+  margin: 2rem;
 }
 
 .titre{
-    padding-bottom: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  border: 2px var(--clrPastelRed) solid;
+  background-color: hsl(228, 29%, 22%);
+
+  font-size: var(--fs200);
+  font-weight: var(--fwBold);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.accordeon{
+  width: 100%;
+}
+
+.question{
+  padding: 1rem;
+  
+  border: 2px var(--clrPastelRed) solid;
+  background-color: hsl(228, 29%, 22%);
+
+  color: var(--clrLightGreen);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reponse{
+  padding: 1.5rem;
+  padding-bottom: 0;
+
+  border-left: 2px var(--clrLightGreen) dashed;
+  border-right: 2px var(--clrLightGreen) dashed;
+  background-color: hsl(228, 29%, 22%);
+}
+
+.reponse:last-child{
+  border-bottom: 2px var(--clrLightGreen) dashed;
+}
+
+.reponse p{
+  padding-bottom: 1.2rem;
+}
+
+.reponse span{
+  color: var(--clrLightCorail);
+  font-weight: bold;
+}
+
+/* [ COMPOSITIONS ] */
+
+/* flex */
+.displayFlex{
+  display: flex;
+}
+.flexColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+.justifyCenter{
+  justify-content: center;
+}
+.justifyBetween{
+  justify-content: space-between;
+}
+.justifyAround{
+  justify-content: space-around;
+}
+.justifyEvenly{
+  justify-content: space-evenly;
+}
+
+.alignCenter{
+  align-items: center;
 }
