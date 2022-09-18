@@ -10,12 +10,113 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <div blocCentral>
-            <div class="banniereTitre">
-                <h1 class="titre">FAQ - ce qu'on sait de Git</h1>
+    <main class="[ flexColumn ]">
+        <section class="[ titre ]">
+            <h1> FAQ - Ce qu'on sait de Git et Github </h1>
+        </section>
+        <section class="[ accordeon ]">
+            <div class="[ paddingBottom textCenter ] [ displayFlex justifyEvenly alignCenter ]">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h2>Ceci est un résumé très grossier des premières notions apprises sur Git et Github.
+                    <br>
+                Je suis actuellement en apprentissage total et des erreurs peuvent se glisser dans mes écrits, voire ma compréhension.
+                </h2>
+                <i class="fa-solid fa-triangle-exclamation"></i>
             </div>
-        </div>
-    </div>
+        
+            <!-- Question 1 -->
+            <div class="[ question ]">
+                <p>Git, à quoi ça sert ?</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="reponse">
+                <p>Git est un système de contrôle des versions.</p> 
+                <p>C'est-à-dire :
+                    <ul>
+                        <li>c'est un système qui va enregistrer les modifications apportées à un document et les compartimenter en diverses versions, en fonction des breakpoint enregistrés</li>
+                        <li>on va pouvoir faire appel à n'importe laquelle des versions enregistrée, à n'importe quel moment</li>
+                        <li>plusieurs personnes vont pouvoir facilement collaborer sur un projet et avoir leur propre version du projet sur leur ordinateur</li>
+                    </ul>
+                </p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="[ question ]">
+                <p>Github, à quoi ça sert ?</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="reponse">
+                <p>Service qui nous permet de stocker des répertoires en ligne et qui va grandement faciliter le travail de groupe sur un même projet.</p>
+                <p>En effet, Github permet de stocker le projet sur lequel on travaille et, chaque personne participant au projet, va pouvoir le pull de Github pour le modifier localement.</p>
+                <p>Ensuite, il est possible de push la modification dans le répertoire du projet et de merge la modification avec le projet après vérification de la modification par les autres participants.</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="[ question ]">
+                <p>Comment Git fonctionne ?</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="[ reponse ]">
+                <p>Git va nous permettre de travailler sur une version de notre projet, dans la main branch ou dans une branch à part afin de ne pas toucher à notre code source lorsqu'on effectue des modifications.</p>
+                <p>Pour pouvoir effectuer une modification à la version sur laquelle on travaille il va falloir effectuer plusieurs opérations :
+                    <ul>
+                        <li>Modifier le document</li>
+                        <li>Passer les modifications à l'état de "staging" (révision ?)</li>
+                        <li>Fusionne les modifications avec la version précédente</li>
+                        <li>Fusionner la branch au main, si on a travaillé sur une branch secondaire du projet</li>
+                    </ul>
+                </p>
+                <p>Ca nous permet de fragmenter les modifications et de garder une trace concise de celles-ci.</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="[ question ]">
+                <p>Quelles sont les commandes principales pour Git ?</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="[ reponse ]">
+                <p>Git <span>init</span> qui nous permet d'initialiser un projet Git.</p>
+                <p>Git <span>add</span>  *nom du fichier* pour ajouter un fichier à l'état "staging" ou Git add *.* pour y ajouter tous les fichiers.</p>
+                <p>Git <span>commit</span> pour fusionner la modification avec la version précédente. </p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="[ question ]">
+                <p>Quelles sont les commandes principales pour Github ? </p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="[ reponse ]">
+                <p>Git <span>clone</span> pour cloner un répertoire de Github sur notre ordinateur. </p>
+                <p>Git <span>pull</span> pour aller chercher des fichiers sur Github. </p>
+                
+                <p>Git <span>push</span> *code du répertoire* *branch* pour pousser une version qui n'a pas été pull de Github. </p>                
+                <p>Git <span>remote add</span> *alias* *code du répertoire* pour donner un alias au lien du répértoire. </p>
+
+                <p>Avec Visual Studio Code, il est possible de faire les différentes étapes de staging, commit et push directement depuis l'onglet *source control*.</p>
+            </div>
+
+            <div class="[ question ]">
+                <p>Pour aller plus loin</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="[ reponse ]">
+                <p>J'ai suivi la playlist de <span>The Net Ninja</span> disponible <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR"><span>ici</span></a>.</p>
+                <p>Il a également une vidéo qui explique comment utiliser Github Pages, disponible <a href="https://www.youtube.com/watch?v=QyFcl_Fba-k&t=611s&ab_channel=TheNetNinja"><span>ici</span></a></p>
+            </div>
+
+            <!-- Modèle 
+            <div class="[ question ]">
+                <p></p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="[ reponse ]">
+                <p></p>
+            </div> -->
+        </section>
+    </main>
 </body>
 </html>
